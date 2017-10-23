@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="k2" method="upgrade">
+	<name>ExtLinks K2 Plugin</name>
+	<author>Pavel Pronskiy</author>
+	<creationDate>21.10.2017</creationDate>
+	<copyright>Copyright (c) 2006 - 2017 pp.</copyright>
+	<authorEmail>pp@sweetgroup.ru</authorEmail>
+	<authorUrl>www.joomlaworks.net</authorUrl>
+	<version>2.2</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>External links</description>
+	<files>
+		<filename plugin="extlinks">extlinks.php</filename>
+	</files>
+	<!-- Standard Joomla! plugin parameters to setup the K2 plugin once -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="excludeDomains" type="textarea" rows="10" default="" label="Exclude domains" description="site.tld
+					site2.tld
+					site3.tld" />
+				<field name="externalPrefix" type="text" default="/redirect" label="Prefix" description="" />
+				<field name="_blank" type="radio" default="0" label="Add target=_blank" description="Add target=_blank for all links">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="noindex" type="radio" default="0" label="Conclude in noindex" description="Conclude link in noindex">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="nofollow" type="radio" default="0" label="Add rel=nofollow" description="Add rel=nofollow for all links">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="jsclick" type="radio" default="0" label="replace href to data-href and bind js event onclick" description="">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="fixuri" type="radio" default="0" label="fixing incorrect uri paths" description="">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
